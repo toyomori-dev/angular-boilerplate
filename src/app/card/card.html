@@ -1,0 +1,24 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{id}}</mat-card-title>
+    <mat-card-subtitle>{{nome + ' ' + sobrenome}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      {{endereco}}
+    </p>
+    <p [ngClass]="{'salario-alto': salario >= 3000}">
+      {{salario | currency:'BRL'}}
+    </p>
+    <b *ngIf="optouVT">
+      Este usuario é optante pelo vale transporte
+    </b >
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="button" (click)="deletarFuncionario(id)">DELETAR</button>
+    <button matButton>SHARE</button>
+  </mat-card-actions>
+</mat-card>
