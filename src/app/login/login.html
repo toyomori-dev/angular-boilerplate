@@ -1,7 +1,11 @@
- <label for="email">email:</label>
-<input type="text" id="dtNascimento" name="email" formControlName="email"/><br /><br />
+<div class="login-container">
+  <form class="login-box">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" formControlName="email" />
 
-<label for="password">password:</label>
-<input type="text" id="grauEscolaridade" name="password" formControlName="password"/><br /><br />
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" formControlName="password" />
 
-<button (click)="login()">Login</button>
+    <button type="button" (click)="login()">Login</button>
+  </form>
+</div>
